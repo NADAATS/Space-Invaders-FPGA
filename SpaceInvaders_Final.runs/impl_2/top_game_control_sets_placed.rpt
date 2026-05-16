@@ -1,0 +1,98 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Apr  2 13:53:33 2026
+| Host         : DESKTOP-2P0AVML running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_game_control_sets_placed.rpt
+| Design       : top_game
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    84 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              11 |            8 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             143 |           45 |
+| Yes          | No                    | No                     |              19 |            9 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              79 |           40 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|         Clock Signal        |                 Enable Signal                |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|  instance_clk/inst/clk_out1 | instance_alien_bullet/E[0]                   | score0                                       |                3 |              4 |         1.33 |
+|  instance_clk/inst/clk_out1 | instance_aliens/E[0]                         | score0                                       |                2 |              4 |         2.00 |
+|  instance_clk/inst/clk_out1 | instance_bullet/b_y                          | instance_bullet/b_y[9]_i_1_n_0               |                2 |              5 |         2.50 |
+|  instance_clk/inst/clk_out1 | instance_bullet/b_y[8]_i_2__0_n_0            | instance_alien_bullet/SR[0]                  |                2 |              5 |         2.50 |
+|  instance_clk/inst/clk_out1 | instance_aliens/FSM_onehot_state_reg[2]_0[0] | score0                                       |                3 |              8 |         2.67 |
+|  instance_clk/inst/clk_out1 | instance_alien_bullet/active03_out           | instance_alien_bullet/SR[0]                  |                5 |              9 |         1.80 |
+|  instance_clk/inst/clk_out1 | instance_bullet/b_x                          | instance_alien_bullet/SR[0]                  |                4 |              9 |         2.25 |
+|  instance_clk/inst/clk_out1 | instance_ship/ship_x[9]_i_1_n_0              |                                              |                4 |              9 |         2.25 |
+|  instance_clk/inst/clk_out1 | instance_aliens/direction70_out              | instance_aliens/offset_x0                    |                8 |              9 |         1.12 |
+|  instance_clk/inst/clk_out1 |                                              | instance_vga/p_0_in                          |                5 |             10 |         2.00 |
+|  instance_clk/inst/clk_out1 | instance_alien_bullet/b_y                    | instance_alien_bullet/SR[0]                  |                6 |             10 |         1.67 |
+|  instance_clk/inst/clk_out1 | instance_vga/p_0_in                          |                                              |                5 |             10 |         2.00 |
+|  instance_clk/inst/clk_out1 |                                              |                                              |                8 |             11 |         1.38 |
+|  instance_clk/inst/clk_out1 | instance_aliens/offset_x                     | instance_aliens/offset_x0                    |                5 |             16 |         3.20 |
+|  instance_clk/inst/clk_out1 |                                              | instance_alien_bullet/move_cnt[0]_i_1__0_n_0 |                5 |             19 |         3.80 |
+|  instance_clk/inst/clk_out1 |                                              | instance_bullet/move_cnt[0]_i_1_n_0          |                5 |             19 |         3.80 |
+|  instance_clk/inst/clk_out1 |                                              | instance_ship/move_cnt[0]_i_1__1_n_0         |                5 |             20 |         4.00 |
+|  instance_clk/inst/clk_out1 |                                              | instance_aliens/move_counter[0]_i_1_n_0      |                6 |             21 |         3.50 |
+|  instance_clk/inst/clk_out1 |                                              | instance_alien_bullet/fire_cnt[0]_i_1_n_0    |                6 |             22 |         3.67 |
+|  instance_clk/inst/clk_out1 |                                              | instance_aliens/offset_x0                    |               13 |             32 |         2.46 |
++-----------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+
+
