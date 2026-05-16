@@ -25,3 +25,8 @@ SpaceInvaders_Final/
 │   └── extrater_grid.v
 ├── constrs/       # XDC constraints (Basys3 pinout)
 └── runs/          # Vivado synthesis & implementation
+
+
+## Academic context
+Master's project — Université Bretagne Sud, Lorient (2025)  
+Embedded & Integrated Systems (SESI)
